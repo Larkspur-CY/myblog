@@ -48,11 +48,28 @@
    ```bash
    hugo mod init myblog
    ```
-4. 启动 Hugo 服务器：
+4. 获取 Congo 主题：
+   ```bash
+   hugo mod get github.com/jpanther/congo/v2
+   ```
+5. 启动 Hugo 服务器：
    ```bash
    hugo server
    ```
-5. 在浏览器中访问 `http://localhost:1313` 查看博客
+6. 在浏览器中访问 `http://localhost:1313` 查看博客
+
+## 博客功能
+
+本博客包含以下常见功能：
+
+- 首页文章列表
+- 分类和标签系统
+- 搜索功能
+- 代码复制
+- 文章目录
+- 多语言支持
+- 响应式设计
+- 深色模式
 
 ## 部署
 

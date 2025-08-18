@@ -15,6 +15,8 @@ timeZone = "Asia/Shanghai"
 enableRobotsTXT = true
 summaryLength = 0
 
+theme = "github.com/jpanther/congo/v2"
+
 [pagination]
   pagerSize = 10
 
