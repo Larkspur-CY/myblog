@@ -44,11 +44,15 @@
 
 1. 克隆项目到本地
 2. 进入项目目录
-3. 启动 Hugo 服务器：
+3. 初始化 Hugo 模块（根据 Congo 主题文档，这是最方便的安装方式）：
+   ```bash
+   hugo mod init myblog
+   ```
+4. 启动 Hugo 服务器：
    ```bash
    hugo server
    ```
-4. 在浏览器中访问 `http://localhost:1313` 查看博客
+5. 在浏览器中访问 `http://localhost:1313` 查看博客
 
 ## 部署
 
