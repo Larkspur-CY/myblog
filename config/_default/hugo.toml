@@ -5,7 +5,7 @@
 # baseURL = "https://your_domain.com/"
 # defaultContentLanguage = "en"
 
-baseURL = "https://coreyblog.netlify.app"
+baseURL = "https://blog.coreychen.top/"
 
 languageCode = "zh-Hans"
 defaultContentLanguage = "zh-Hans"
