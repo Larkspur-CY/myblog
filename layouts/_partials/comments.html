@@ -1,0 +1,61 @@
+{{/* giscus 评论系统组件 - 增强版 */}} {{/* 多语言自适应配置 */}} {{-
+$giscusLang := "zh-CN" -}} {{- if eq .Language.Lang "en" -}} {{- $giscusLang =
+"en" -}} {{- end -}} {{/* 路径标准化逻辑 - 统一多语言评论映射 */}} {{-
+$commentTerm := .RelPermalink -}} {{/* 统一去掉开头的斜杠 */}} {{- $commentTerm
+= strings.Replace .RelPermalink "/" "" 1 -}} {{- if eq .Language.Lang "en" -}}
+{{/* 对于英文页面，去掉 en/ 前缀来统一映射 */}} {{- $commentTerm =
+strings.Replace $commentTerm "en/" "" 1 -}} {{- end -}}
+
+<div class="giscus-comments">
+  {{/* giscus评论组件 */}}
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="Larkspur-CY/myblog"
+    data-repo-id="R_kgDOPfwEKg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOPfwEKs4CuVNQ"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+
+  {{/* giscus主题同步脚本 */}}
+  <script>
+    (function () {
+      function sync() {
+        const iframe = document.querySelector("iframe.giscus-frame");
+        if (iframe) {
+          iframe.contentWindow.postMessage(
+            {
+              giscus: {
+                setConfig: {
+                  theme: document.documentElement.classList.contains("dark")
+                    ? "dark"
+                    : "light",
+                },
+              },
+            },
+            "https://giscus.app"
+          );
+        }
+      }
+
+      new MutationObserver(() => sync()).observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ["class"],
+      });
+
+      window.addEventListener("message", (e) => {
+        if (e.origin === "https://giscus.app" && e.data?.giscus?.discussion)
+          sync();
+      });
+    })();
+  </script>
+</div>

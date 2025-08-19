@@ -56,7 +56,8 @@ fingerprintAlgorithm = "sha256"
   showTableOfContents = true
   showTaxonomies = true
   showWordCount = true
-  showComments = false
+  # 添加评论系统
+  showComments = true
   # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo", "xing", "bluesky"]
 
 [list]
