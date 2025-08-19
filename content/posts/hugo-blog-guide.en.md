@@ -684,7 +684,7 @@ Features:
 
 Theme: By default, select User Preferred Color Scheme
 
-Generate script: After completing all the above configurations, a &lt;script&gt; code block will be automatically generated at the bottom of the page. Click the "Copy" button to copy this code. &lt;/script&gt;
+Generate script: After completing all the above configurations, a &lt;script&gt; code block will be automatically generated at the bottom of the page. Click the "Copy" button to copy this code.
 
 Advanced usage: Check the guide for additional settings like giscus.json to allow requests only from specific sources.
 
