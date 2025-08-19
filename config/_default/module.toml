@@ -1,3 +1,5 @@
 [hugoVersion]
   extended = true
   min = "0.87.0"
+
+# 使用本地主题，不需要导入模块
