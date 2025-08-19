@@ -1,0 +1,51 @@
+# -- 主菜单 --
+# 主菜单显示在页面顶部的页眉中。
+# 可接受的参数有 name, pageRef, page, url, title, weight。
+#
+# 最简单的菜单配置是提供：
+#   name = 要为此菜单链接显示的名称
+#   pageRef = 要链接到的页面或部分的标识符
+#
+# 默认情况下，菜单按字母顺序排列。这可以通过提供权重值来覆盖。
+# 然后菜单将按权重从低到高排序。
+
+[[main]]
+  name = "博客"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "分类"
+  pageRef = "categories"
+  weight = 20
+
+[[main]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 30
+
+[[main]]
+  name = "关于"
+  pageRef = "about"
+  weight = 40
+
+[[main]]
+  identifier = "search"
+  weight = 99
+  [main.params]
+    action = "search"
+
+[[main]]
+  identifier = "locale"
+  weight = 100
+  [main.params]
+    action = "locale"
+
+# -- 页脚菜单 --
+# 页脚菜单显示在页面底部，就在版权声明之前。
+# 配置方式与主菜单相同。
+
+# [[footer]]
+#   name = "标签"
+#   pageRef = "tags"
+#   weight = 10
