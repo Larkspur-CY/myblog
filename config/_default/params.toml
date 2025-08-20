@@ -7,9 +7,6 @@
 
 colorScheme = "congo"
 
-# Custom CSS
-[customCSS]
-  ["css/custom.css"]
 defaultAppearance = "light" # valid options: light or dark
 autoSwitchAppearance = true
 

@@ -30,7 +30,7 @@
   weight = 40
 
 [[main]]
-  identifier = "search"
+  identifier = "搜索"
   weight = 99
   [main.params]
     action = "search"
