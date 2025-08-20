@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <article>
+    <header class="max-w-prose">
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title }}
+      </h1>
+    </header>
+    <section class="content mt-0 prose dark:prose-invert">
+      {{ .Content }}
+    </section>
+    
+    <!-- 友链列表 -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">{{ .Site.Params.links.title | default "友情链接" }}</h2>
+      <p class="mt-2 text-neutral-600 dark:text-neutral-400">{{ .Site.Params.links.description | default "这里是一些我推荐的博客和网站。" }}</p>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {{ range .Site.Data.links }}
+        <div class="border rounded-lg p-4 dark:border-neutral-700 hover:shadow-lg transition-shadow">
+          <div class="flex items-center">
+            {{ if .avatar }}
+            <img src="{{ .avatar }}" alt="{{ .name }}" class="w-10 h-10 rounded-full mr-3" />
+            {{ else }}
+            <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mr-3">
+              {{- substr .name 0 1 -}}
+            </div>
+            {{ end }}
+            <h3 class="text-lg font-semibold text-blue-600 dark:text-blue-400">
+              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
+            </h3>
+          </div>
+          <p class="mt-2 text-neutral-600 dark:text-neutral-400">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+  </article>
+{{ end }}

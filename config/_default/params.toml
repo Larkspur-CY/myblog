@@ -71,6 +71,12 @@ fingerprintAlgorithm = "sha256"
 [taxonomy]
   showTermCount = true
 
+[links]
+  # 友链页面标题
+  title = "友情链接"
+  # 友链页面描述
+  description = "这里是一些我推荐的博客和网站。"
+
 [fathomAnalytics]
   # site = "ABC12345"
 
